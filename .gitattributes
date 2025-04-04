@@ -1,0 +1,6 @@
+*.gz filter=lfs diff=lfs merge=lfs -text
+data/cifar-100-python/train filter=lfs diff=lfs merge=lfs -text
+data/cifar-100-python filter=lfs diff=lfs merge=lfs -text
+data/cifar-10-batches-py filter=lfs diff=lfs merge=lfs -text
+data/FashionMNIST filter=lfs diff=lfs merge=lfs -text
+data filter=lfs diff=lfs merge=lfs -text
