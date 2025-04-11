@@ -1,0 +1,150 @@
+{
+    "training_params": {
+        "common": {
+            "batch_size": 16,
+            "num_epoch": 5,
+            "lr": 0.1,
+            "lr_type": "multistep",
+            "decay_rate": 0.1,
+            "decay_epochs": [100, 200],
+            "momentum": 0.9,
+            "optimizer": "sgd"
+        },
+        "cifar10": {
+            "msdnet24_1": {
+                "weight_decay": 4e-4,
+                "momentum": 0.9,
+                "optimizer": "sgd"
+            },
+            "msdnet24_4": {
+                "weight_decay": 4e-4,
+                "momentum": 0.9,
+                "optimizer": "sgd"
+            },
+            "resnet110_1": {
+                "weight_decay": 5e-4,
+                "momentum": 0.9,
+                "optimizer": "sgd"
+            },
+            "resnet110_4": {
+                "weight_decay": 5e-4,
+                "momentum": 0.9,
+                "optimizer": "sgd"
+            }
+        },
+        "CINIC10": {
+            "msdnet24_1": {
+                "weight_decay": 4e-4,
+                "momentum": 0.9,
+                "optimizer": "sgd"
+            },
+            "msdnet24_4": {
+                "weight_decay": 4e-4,
+                "momentum": 0.9,
+                "optimizer": "sgd"
+            },
+            "resnet110_1": {
+                "weight_decay": 5e-4,
+                "momentum": 0.9,
+                "optimizer": "sgd"
+            },
+            "resnet110_4": {
+                "weight_decay": 5e-4,
+                "momentum": 0.9,
+                "optimizer": "sgd"
+            }
+        },
+        "cifar100": {
+            "msdnet24_1": {
+                "weight_decay": 5e-4,
+                "momentum": 0.9,
+                "optimizer": "sgd"
+            },
+            "msdnet24_4": {
+                "weight_decay": 5e-4,
+                "momentum": 0.9,
+                "optimizer": "sgd"
+            },
+            "resnet110_1": {
+                "weight_decay": 5e-4,
+                "momentum": 0.9,
+                "optimizer": "sgd"
+            },
+            "resnet110_4": {
+                "weight_decay": 5e-4,
+                "momentum": 0.9,
+                "optimizer": "sgd"
+            }
+        }
+    },
+    "model_params": {
+        "common_msdnet": {
+            "base": 6,
+            "step": 6,
+            "num_scales": 3,
+            "step_mode": "even",
+            "num_channels": 16,
+            "growth_rate": 6,
+            "growth_factor": [1, 2, 4],
+            "prune": "max",
+            "bn_factor": [1, 2, 4],
+            "bottleneck": true,
+            "compression": 0.5,
+            "reduction": 0.5
+        },
+        "cifar10": {
+            "msdnet24_1": {
+                "num_blocks": 1
+            },
+            "msdnet24_4": {
+                "num_blocks": 4
+            },
+            "resnet110_1": {
+                "ee_layer_locations": [],
+                "ee_num_conv_layers": [],
+                "num_blocks": 1
+            },
+            "resnet110_4": {
+                "ee_layer_locations": [30, 38, 46],
+                "ee_num_conv_layers": [3, 3, 3],
+                "num_blocks": 4
+            }
+        },
+        "CINIC10": {
+            "msdnet24_1": {
+                "num_blocks": 1
+            },
+            "msdnet24_4": {
+                "num_blocks": 4
+            },
+            "resnet110_1": {
+                "ee_layer_locations": [],
+                "ee_num_conv_layers": [],
+                "num_blocks": 1
+            },
+            "resnet110_4": {
+                "ee_layer_locations": [30, 38, 46],
+                "ee_num_conv_layers": [3, 3, 3],
+                "num_blocks": 4
+            }
+        },
+        "cifar100": {
+            "msdnet24_1": {
+                "num_blocks": 1
+            },
+            "msdnet24_4": {
+                "num_blocks": 4
+            },
+            "resnet110_1": {
+                "ee_layer_locations": [],
+                "ee_num_conv_layers": [],
+                "num_blocks": 1
+            },
+            "resnet110_4": {
+                "ee_layer_locations": [30, 38, 46],
+                "ee_num_conv_layers": [3, 3, 3],
+                "num_blocks": 4
+            }
+        }
+    }
+}
